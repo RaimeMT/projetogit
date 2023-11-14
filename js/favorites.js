@@ -48,7 +48,6 @@ export class Favorites {
     this.entries = filteredEntries
     this.update()
     this.save()
-    this.noFavorites()
   }
 }
 
@@ -140,16 +139,19 @@ export class FavoritesView extends Favorites {
 
 
   noFavorites(){
-    if(this.entries.length){
-      console.log('if')
-      this.tbody.classList.remove('table-in')
-      console.log('if')
-    } else  {
-      console.log(this.tbody)
-      this.tbody.classList.add('table-in')
-      console.log('else')
+    if (!this.entries.length) {
+      const tr = document.createElement('tr')
+      
+      tr.classList.add('no-favorites')
+
+      tr.innerHTML = `
+      <td colspan="4">
+        <img src="../favicon/Assets.svg" alt="" />
+      </td>
+      `
+
+      this.tbody.append(tr)
     }
-    
   }
   
 }

@@ -158,13 +158,6 @@ td .remove{
   cursor: pointer;
 }
 
-.table-in{
-  background: url(favicon/Assets.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  border: green 1px solid;
-  height: 100vh;
-
+.no-favorites > td {
+  text-align: center;
 }
