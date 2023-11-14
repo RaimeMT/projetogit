@@ -1,0 +1,170 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  font-size: 62.5;
+
+  --ff-primary: 'Roboto', sans-serif;
+  --text-color: #E1E1E6;
+
+  --hue: 194;
+  --primary-color: hsl(var(--hue),91%, 25%);
+}
+
+body{
+  font-size: 1.6rem;
+  color: var(--text-color);
+  background-color: #000;
+}
+
+body *{
+  font-family: var(--ff-primary);
+}
+
+.sr-only{
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+#app{
+  padding: 6rem;
+  max-width: 1120;
+  margin: 0 auto;
+}
+
+header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 2.5rem 0;
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  align-self: stretch;
+  gap: 10px;
+  border-radius: 5px;
+}
+
+.search input{
+  height: 1.6rem;
+  width: 462px;
+  align-items: flex-start;
+  background: hsla(191, 65%, 7%, 1);
+  border-radius: 5px;
+  border: 0 solid;
+  padding: 1rem 1rem;
+  color: white;
+}
+
+.search button {
+  display: flex;
+  padding: .5rem .5rem;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  color: #FFF;
+  background-color: var(--primary-color);
+  border: 0 solid;
+  cursor: pointer;
+  transition: background .3s;
+}
+
+.search button:hover{
+  background: hsla(0, 0%, 100%, 1);
+  color: hsla(195, 91%, 25%, 1);
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table *{
+  font-size: 1.4rem;
+  color: #E1E1E6;
+}
+
+table th{
+  background: hsla(194, 72%, 13%, 1);
+  text-align: left;
+  font-weight: normal;
+  padding: 1.5rem;
+}
+
+table th:first-child{
+  border-top-left-radius: .6rem;
+}
+
+table th:last-child{
+  border-top-right-radius: .6rem;
+}
+
+table tr:nth-child(odd){
+  background: hsla(195, 61%, 6%, 0.5);
+}
+
+table tr:nth-child(even){
+  background: hsla(192, 65%, 7%, 1);
+}
+
+tbody tr{
+  height: max-content ;
+}
+
+table td{
+  padding: 1.5rem;
+  text-align: left;
+  gap: 1rem;
+}
+
+td.user{
+  display: flex;
+  align-items: center;
+}
+
+
+td.user img{
+  width: 5rem;
+  height: 5rem;
+  
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+td.user a {
+  text-decoration: none;
+}
+
+td.user a p{
+  font-weight: bold;
+}
+
+td .remove{
+  background: none;
+  border: none;
+  color:red;
+  cursor: pointer;
+}
+
+.table-in{
+  background: url(favicon/Assets.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  border: green 1px solid;
+  height: 100vh;
+
+}
